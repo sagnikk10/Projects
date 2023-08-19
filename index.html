@@ -4,64 +4,116 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AGE CALCULATOR</title>
+    <title>ONLINE FOOD DELIVERY</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" media="screen and (max-width: 1170px)" href="phone.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&display=swap" rel="stylesheet">
+    
 </head>
 <body>
-    <div class="container">
-        <div class="calculator">
-            <h1>JAVASCRIPT<br><span>AGE CALCULATOR</span></h1>
-            <div class="input-box">
-                <input type="date" id="date">
-                <button onclick="calculateage()">Calculator</button>
-            </div>
-            <p id="result"></p>
+    <nav id="navbar">
+        <div id="logo">
+            <img src="pexels-cottonbro-studio-4503734.jpg" height="200" width="250" alt="ONLINE FOOD DELIVERY">
+
         </div>
-    </div>
-<script>
-    let userInput = document.getElementById("date");
-    userInput.max = new Date().toISOString().split("T")[0];
-    let result = document.getElementById("result");
+        <ul>
+            <li class="item"><a href="#">HOME</a></li>
+            <li class="item"><a href="#">SERVICES</a></li>
+            <li class="item"><a href="#">ABOUT US</a></li>
+            <li class="item"><a href="#">CONTACT US</a></li>
+            
+        </ul>
+        
+    </nav>
+    <section id="home">
+        <h1 class="h-primary">WELCOME TO MY ONLINE FOOD DELIVERY SERVICES</h1>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum nesciunt tempore dolorum pariatur, veniam consequuntur aspernatur. Eaque soluta natus totam sint iure, ducimus alias necessitatibus ipsa ratione, fuga vero eos.</p>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum nesciunt tempore dolorum pariatur, veniam consequuntur aspernatur. Eaque soluta natus totam sint iure, ducimus alias necessitatibus ipsa ratione, fuga vero eos.</p>
+        <button class="btn" >ORDER NOW</button>
+    </section>
 
-    function calculateage(){
-        let birthDate = new Date(userInput.value);
+    <section class="services-container" >
+        <h1 class="h-primary center">Our Services</h1>
+        <div id="services">
+            <div class="box">
+                <img src="biriyani.jpg" alt="BIRIYANI IMAGE">
+                <h2 class="h-secondary center">Food Ordering</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae porro ex aut dignissimos aspernatur est sapiente iure? Error pariatur dolorem aperiam eius, eum non itaque ratione adipisci blanditiis dolor earum eos labore magni quae?</p>
+            </div>
+            <div class="box">
+                <img src="delivery.jpg" alt="BIRIYANI IMAGE">
+                <h2 class="h-secondary center">Food Catering</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae porro ex aut dignissimos aspernatur est sapiente iure? Error pariatur dolorem aperiam eius, eum non itaque ratione adipisci blanditiis dolor earum eos labore magni quae?</p>
+            </div>
+            <div class="box">
+                <img src="burger.jpg" alt="BIRIYANI IMAGE">
+                <h2 class="h-secondary center">Bulk Ordering</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae porro ex aut dignissimos aspernatur est sapiente iure? Error pariatur dolorem aperiam eius, eum non itaque ratione adipisci blanditiis dolor earum eos labore magni quae?</p>
+            </div>
+        </div>
+    </section>
+    <section id="client-section">
+        <h1 class="h-primary center">Our Clients</h1>
+        <div id="clients">
+            <div class="client-item">
+                <img src="swiggy.png" alt="SWIGGY IMAGE ">
 
-        let d1 = birthDate.getDate();
-        let m1 = birthDate.getMonth() +1;
-        let y1 = birthDate.getFullYear();
+            </div>
+            <div class="client-item">
+                <img src="zomato.png" alt="ZOMATO IMAGE ">
 
-        let today = new Date();
+            </div>
+            <div class="client-item">
+                <img src="eatsure.png" alt="EATSURE IMAGE ">
 
-        let d2 = today.getDate();
-        let m2 = today.getMonth() + 1;
-        let y2 = today.getFullYear(); 
+            </div>
+            <div class="client-item">
+                <img src="amazon.png" alt="AMAZON IMAGE ">
 
-        let d3,m3,y3;
-        y3 = y2 - y1;
-        if (m2 >= m1)
-        {
-            m3 = m2 - m1;
-        } else {
-            y3--;
-            m3 = 12 + m2 -m1;
-        }
+            </div>
+            <div class="client-item">
+                <img src="snapdeal.png" alt="SNAPDEAL IMAGE ">
 
-        if (d2 >= d1){
-            d3 = d2 -d1;
-        } else {
-            m3--;
-            d3 = getDaysInMonth(y1, m1) + d2 - d1;
-        }
-        if (m3 < 0){
-            m3 = 11;
-            y3--;
-        }
-        result.innerHTML = `You are <span>${y3}</span> years, <span>${m3}</span> months and <span>${d3}</span> days old`;
-    }
+            </div>
+            
+            
+        </div>
+    </section>
 
-    function getDaysInMonth(year, month){
-        return new Date(year , month, 0).getDate();
-    }
-</script>
+    <section id="contact">
+        <h1 class="h-primary center">Contact us</h1>
+        <div id="contact-box">
+            <form action="">
+                <div class="form-group">
+                    <label for="">Name:</label>
+                    <input type="text" name="" value="">
+                </div>
+                <div class="form-group">
+                    <label for="">Email:</label>
+                    <input type="email" name="" value="">
+                </div>
+                <div class="form-group">
+                    <label for="">Phone Number:</label>
+                    <input type="Phone" name="" value="">
+                </div>
+                <div class="form-group">
+                    <label for="">Your Message:</label><br>
+                    <textarea name="Message" id="Message" cols="30" rows="10"></textarea>
+                </div>
+                
+            </form>
+
+        </div>
+
+    </section>
+
+    <footer>
+        <div class="center">
+            copyright &copy; www.myonlinefooddeliveryservices.com. All rights reserved!
+
+        </div>
+    </footer>
 </body>
 </html>
